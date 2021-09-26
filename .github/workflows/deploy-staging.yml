@@ -18,4 +18,5 @@ env:
 
 jobs:
   build:
+    if: contains(github.events.pull_request.labels.*.name = 'stage')
     runs-on: ubuntu-latest
